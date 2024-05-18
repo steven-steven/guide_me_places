@@ -30,3 +30,75 @@ Processing by PrimaryController#index as HTML
 Completed 200 OK in 173ms (Views: 172.2ms | ActiveRecord: 0.0ms | Allocations: 146608)
 
 
+Started GET "/" for ::1 at 2024-05-18 16:37:39 -0400
+Processing by PrimaryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering primary/index.html.erb within layouts/application
+  Rendered primary/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 1050)
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 1142)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 2039)
+
+
+  
+ActionView::Template::Error (undefined method `js_map' for an instance of #<Class:0x00000001455f2800>):
+    1: <h1 class="text-green-300">
+    2: White
+    3: </h1>
+    4: <%= js_map [{latitude: 52.5200, longitude: 13.4050}]%>
+  
+app/views/primary/index.html.erb:4
+Started GET "/" for ::1 at 2024-05-18 16:37:40 -0400
+Processing by PrimaryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering primary/index.html.erb within layouts/application
+  Rendered primary/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 994)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1085)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1312)
+
+
+  
+ActionView::Template::Error (undefined method `js_map' for an instance of #<Class:0x00000001455f2800>):
+    1: <h1 class="text-green-300">
+    2: White
+    3: </h1>
+    4: <%= js_map [{latitude: 52.5200, longitude: 13.4050}]%>
+  
+app/views/primary/index.html.erb:4
+Started GET "/" for ::1 at 2024-05-18 16:38:06 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PrimaryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering primary/index.html.erb within layouts/application
+  Rendered primary/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 347)
+  Rendered layout layouts/application.html.erb (Duration: 174.0ms | Allocations: 160701)
+Completed 200 OK in 180ms (Views: 176.2ms | ActiveRecord: 0.0ms | Allocations: 164514)
+
+
+Started GET "/" for ::1 at 2024-05-18 16:43:42 -0400
+Processing by PrimaryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering primary/index.html.erb within layouts/application
+  Rendered primary/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 6239)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 6490)
+
+
+Started GET "/" for ::1 at 2024-05-18 16:43:42 -0400
+Processing by PrimaryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering primary/index.html.erb within layouts/application
+  Rendered primary/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 6240)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 6487)
+
+
+Started GET "/" for ::1 at 2024-05-18 16:43:53 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PrimaryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering primary/index.html.erb within layouts/application
+  Rendered primary/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 351)
+  Rendered layout layouts/application.html.erb (Duration: 70.8ms | Allocations: 58838)
+Completed 200 OK in 76ms (Views: 72.8ms | ActiveRecord: 0.0ms | Allocations: 62651)
+
+
