@@ -1,2 +1,5 @@
 tmp/*
 vendor/
+config/google_drive_service_api_key.json
+.ruby-version
+log/*

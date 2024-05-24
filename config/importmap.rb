@@ -11,3 +11,4 @@ pin "idn_boundaries"
 
 # pin "leaflet", to: "https://ga.jspm.io/npm:leaflet@1.7.1/dist/leaflet-src.js"
 # pin "leaflet-providers", to: "https://ga.jspm.io/npm:leaflet-providers@1.13.0/leaflet-providers.js"
+pin "leaflet.markercluster" # @1.5.3

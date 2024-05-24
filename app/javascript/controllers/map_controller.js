@@ -1,9 +1,9 @@
 import { Controller } from "@hotwired/stimulus"
 import L from 'leaflet'
+import "leaflet.markercluster"
 import boundary from 'idn_boundaries'
 
 export default class extends Controller {
-
   initialize() {
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
     const zoomLevel = isMobile ? 3.6 : 4.8
@@ -13,7 +13,7 @@ export default class extends Controller {
         [-11.554099, 92.902008],
         [7.864076, 145.115198]
       ],
-      zoomSnap: 0.25,
+      zoomSnap: 1,
       zoomDelta: 2
     }).setView([-2.600029, 118.015776], zoomLevel);
 
@@ -28,10 +28,10 @@ export default class extends Controller {
       ext: 'png'
     }).addTo(this.map);
 
-    const locationData = [{lat: -1.685247, long: 111.447739, emoji: "⛰️"}]
-    this.setMarkers(locationData)
     this.setBoundaries()
     this.addInfoControl()
+    const locationData = JSON.parse(this.element.dataset.mapLocations)
+    this.setMarkers(locationData)
 
     this.map.on('click', function (e) {
       console.log("You clicked the map at " + e.latlng.toString())
@@ -39,14 +39,21 @@ export default class extends Controller {
   }
 
   setMarkers = (locations) => {
+    const markers = new L.MarkerClusterGroup({showCoverageOnHover: false});
+
     locations.forEach((location) => {
-      L.marker([location.lat, location.long], {icon: this.markerIcons(location.emoji)})
-        .addTo(this.map)
-        .on('click', function(e) {
-          console.log(e.latlng);
+      const marker = L.marker([location.lat, location.long], {icon: this.markerIcons(location.emoji)})
+        .on('click', (e) => {
+          if(location.iframe1){
+            document.getElementById("street_view_iframe").src = location.iframe1;
+          }
+          this.info.update(location.place);
         });
-        // marker.bindPopup("<b>Hello world!</b><br>I am a popup.");
+
+      markers.addLayer(marker);
     })
+
+    this.map.addLayer(markers);
   }
 
   markerIcons = (emoji) => (
@@ -67,8 +74,8 @@ export default class extends Controller {
       return this._div;
     };
 
-    this.info.update = (props) => {
-      this._div.innerHTML = '<h4>Region</h4>' +  (props ? `<b>${props.shapeName}</b>` : 'Hover over a regency<br/> or click on a location pin');
+    this.info.update = (label) => {
+      this._div.innerHTML = '<h4>Region</h4>' +  (label ? `<b>${label}</b>` : 'Hover over a regency<br/> or click on a location pin');
     };
 
     this.info.addTo(this.map);
@@ -112,7 +119,7 @@ export default class extends Controller {
     });
 
     layer.bringToFront();
-    this.info.update(layer.feature.properties);
+    this.info.update(layer.feature.properties.shapeName);
   }
 
   resetHighlight = (e) => {

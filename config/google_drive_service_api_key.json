@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "guide-me-places",
+  "private_key_id": "7ddf5f451ca2289147fee99eadcc6020b6b18c04",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC7PlFLPfLAoV/u\nxANwd0qtT4ew6O2QDbvfCawyuQPUduScdN7HJsV/b7ylDyDPmkYPQBCAEe6D7Zpj\nVBajWlbOf9ChXtnjbP9I9mDFYDGZ/Agj97B30Y3ec31MfgQOf5mRtJkLUBn+ONLr\neJgyeRkBlfoGMyRCd0VOjl9y+S5dRxBqdCXj60uXD6lhsd+ZP+/tdh+y6MTBSUWe\nr9us/lWid1S2xsgAC2LuxIBGlTAMqK2n/kLc4pUERIWWyHHFBUm2ysf8awxyzi8x\nXWWhudV+wI8XY6Ts54oXgho4UuTRNKmx++OWdnzX3cGVEn6kM3PIdPJMVV3Llxr1\nahWI2PbBAgMBAAECggEACfVTAoLtbbRHc13mZu1ZQeVobI6+z7oDQ2XyzBHN89dM\n6ktG6+WSfGgXatnmn1PvpPD9z6nkewzAeMbom1B7LGlc0bBHO1K5Mwqzc9vdV3ix\ngCQ0tPKmrm2K/O34zkKYCslFmHXuo/gms5JK2ehZ3Z052mmO5KAORhLJXcaF4j0F\nhQCk6BuRpHvVsgKWEBfwRGlL4PkdNY6/bhJZK+wB1Q8hvrWZD0+oPAx23Tr3BEHh\n+Y8MRExomQdnfrAG1dW1BPAABDht7T2S0UJxcBGwQOA7XurEJfUr8r8E0hyUWXAE\nsFKmDw/FbdH5IOAt7984vrOZBqT4yRGhut+eCRn8NwKBgQDg7GGOdvtXDAmKZjGm\n57DHsjQ8fdGIllRkOGeMUG2tna5PNUXC80F3mzemmXfk7pKVH0hsTMjcuAaqftNn\nR/X1+c5DvT31nZIIbfdGl7DBsXWMB9JGkybsdIV6ECWecFnBDTeejB62S7cl1d4a\nWUgkeH+xMhRx9u9J+k47buBiDwKBgQDVHS8PFtKFc01aAjNaih40p7KIvMjtT0eC\naK+PDp/gwHIARB0cohdBdvlNKFWlXiO9bVl9vWeLdoKjKCaUUn6ABCe+XS7qIL0V\nZ8Ek/M5CXNi1yJI1WcQAUaWDLCZ74iG9P365VBimAPBfFzVcPxUhHqZa+ZHdeAIP\nmBz/P+eqLwKBgH/Aw4iPvCKtC544fWs3nglPBqx1KlZSTIzAHNBtvl4meaMztvQM\nBttQpkNSV+8IMunQYupgkpYLUH32m0zGasXTpXyEOHURkqiHDTRjZFof2Yw3xQ+g\n9TLI3CeAlF1xowkr4LOFEsyoJNawqv58R6Wva5fRwhsZDsEOEvFfAMOxAoGBAMZC\nfSoTeExQRRDMZUwAnDMuI6iTwHUNQSBwFYsH9vKW9jeLJm4h2XK8pRcDxBGw75zl\nYtDYaMDUwpnY23M2/5pGw1aUx/Vl+aI1QPkQ+y2/xJfw/RwG45HMYycR5sdvSyYN\nMO5m7vtYekZsh+bGhPin0+lkri+T2o75W1iW8gVfAoGBAN9ji9DfLVG5TUhowlzd\nADinzB09167JOgCfTrbiN89IoJ1/mC+ShbjxzfOXd0TBcZ0ZRiSA3pKL75AbRRHL\nbu1Eh0OHhzO7Tb90HVGXrITJoLM1p68MU42/oqJSfvlKOEQUN+TbiW4wbKbTrKkd\na8gTyJwoktunocMdBEse2lBG\n-----END PRIVATE KEY-----\n",
+  "client_email": "guidemeplaces-app@guide-me-places.iam.gserviceaccount.com",
+  "client_id": "117242160669418805865",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/guidemeplaces-app%40guide-me-places.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
