@@ -1,0 +1,14 @@
+<turbo-stream action="replace" target="place_details">
+  <template>
+    <div id="place_details" class="basis-1/2 p-3">
+      <span>Your Stop: <b><%= @location %></b></span>
+    </div>
+  </template>
+</turbo-stream>
+<turbo-stream action="replace" target="street_view">
+  <template>
+    <div id="street_view" class="basis-1/2 h-full border-dashed border-2 rounded-lg">
+      <iframe id="street_view_iframe" src="<%= @iframe1 %>" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </template>
+</turbo-stream>

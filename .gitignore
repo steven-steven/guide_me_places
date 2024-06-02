@@ -2,4 +2,16 @@ tmp/*
 vendor/
 config/google_drive_service_api_key.json
 .ruby-version
-log/*
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore precompiled javascript packs
+/public/packs
+/public/packs-test
+/public/assets
+
+.DS_Store
