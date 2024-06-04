@@ -70,3 +70,4 @@ gem "tailwindcss-rails", "~> 2.6"
 gem "google_drive"
 gem 'requestjs-rails'
 gem "heroicon"
+gem 'airtable'

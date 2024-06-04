@@ -1,5 +1,5 @@
 class ApplicationService
-  def self.call(*args, &block)
-    new(*args, &block).call
+  def self.call(method_name = :call, **kwargs, &block)
+    new(**kwargs, &block).send(method_name)
   end
 end

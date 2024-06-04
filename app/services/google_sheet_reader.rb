@@ -1,7 +1,7 @@
 require 'google_drive'
 
 class GoogleSheetReader < ApplicationService
-  def initialize(sheet)
+  def initialize(sheet:)
     @sheet = sheet
     @session = GoogleDrive::Session.from_service_account_key("./config/google_drive_service_api_key.json")
   end

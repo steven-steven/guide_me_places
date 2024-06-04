@@ -1,13 +1,13 @@
 <div class="flex flex-col h-full w-full bg-[#f8f7f4]">
-  <nav>
+  <nav class="z-10 bg-inherit opacity-90">
     <h1 class="p-3 text-xl">Guide Me Places</h1>
   </nav>
 
-  <div data-controller="map" id="map" class="w-full h-1/2" data-map-locations="<%= @locations.to_json %>"></div>
-  <div class="basis-1/2 flex w-full">
+  <div data-controller="map" id="map" class="absolute w-full h-1/2 z-0" data-map-locations="<%= @locations.to_json %>"></div>
+  <div class="absolute bottom-0 left-0 z-0 h-1/2 w-full flex">
     <div id="place_details" class="h-full w-full relative border border-4 p-5">
       <div class="w-full h-full bg-pemandangan bg-no-repeat bg-top bg-cover">
-        <div class="absolute inset-0 w-full h-full p-5 bg-white dark:bg-black bg-opacity-70 dark:bg-opacity-70 flex flex-col gap-3 justify-center items-center">
+        <div class="absolute z-10 inset-0 w-full h-full p-5 bg-white bg-opacity-70 dark:bg-opacity-70 flex flex-col gap-3 justify-center items-center">
           Select a destination to begin your journey
           <%#= heroicon "arrow-down-circle", variant: :outline, options: { class: "shrink-0 h-10 w-10 text-slate-700 dark:text-slate-200" } %>
         </div>

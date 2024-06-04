@@ -1,13 +1,31 @@
 <turbo-stream action="replace" target="place_details">
   <template>
-    <div id="place_details" class="basis-1/2 p-3">
-      <span>Your Stop: <b><%= @location %></b></span>
+    <div id="place_details" class="w-1/2 overflow-y-scroll p-5">
+      <div class="mb-3">
+        <span class="bg-yellow-100 p-2 text-lg">📍 Your Stop: <span class="font-bold"><%= @location %></span></span>
+      </div>
+      <div class="flex flex-col gap-3 divide-y divide-slate-700">
+        <% @articles.each do |article| %>
+          <%= link_to(article[:url], target: "_blank") do %>
+            <div class="flex gap-3 mt-3 hover:border-2 hover:border-dashed">
+              <%= image_tag(article[:image], alt: article[:title], class:"w-3/12 object-cover") %>
+              <div>
+                <p class="font-semibold text-lg">
+                  <%= article[:title] %>
+                  <%= image_tag(article[:favicon], class:"w-5 inline mx-2") %>
+                </p>
+                <p><%= article[:short_description] %></p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </template>
 </turbo-stream>
 <turbo-stream action="replace" target="street_view">
   <template>
-    <div id="street_view" class="basis-1/2 h-full border-dashed border-2 rounded-lg">
+    <div id="street_view" class="w-1/2 h-full border-dashed border-2 rounded-lg">
       <iframe id="street_view_iframe" src="<%= @iframe1 %>" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </template>
