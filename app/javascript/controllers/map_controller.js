@@ -7,7 +7,7 @@ import { get } from "@rails/request.js"
 export default class extends Controller {
   initialize() {
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
-    const zoomLevel = isMobile ? 3.6 : 4.5
+    const zoomLevel = isMobile ? 3.6 : 4.6
 
     this.map = L.map('map', {
       maxBounds: [

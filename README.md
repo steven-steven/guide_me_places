@@ -1,24 +1,15 @@
-# README
+# Guide Me Places
+Explore a curation of tourist spots in the Indonesia archipelago
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Development instruction
+- Run `bin/rails db:migrate`
+- Run `overmind start -f Procfile.dev`
+- Run `overmind connect web` in a separate terminal for debugging
+- `EDITOR=vim rails credentials:edit` / `EDITOR=vim rails credentials:edit --environment production`
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## How contents are curated
+1. Enter location, emojis, iframes in [Excel Sheet](https://docs.google.com/spreadsheets/d/1AXS8XtibYs0Ou-CgtrxaiJ87u464EdL7S0dCRPyhvv0/edit#gid=0)
+2. Save url to airtable (with Shortcuts automation)
+4. Update new locations from excel to airtable
+3. Tag with places
+4. Scrape the url to enrich the records

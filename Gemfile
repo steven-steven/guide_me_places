@@ -71,3 +71,5 @@ gem "google_drive"
 gem 'requestjs-rails'
 gem "heroicon"
 gem 'airtable'
+
+gem "dockerfile-rails", ">= 1.6", :group => :development

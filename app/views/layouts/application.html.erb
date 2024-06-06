@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html class="flex min-h-full">
   <head>
-    <title>GuideMePlaces</title>
+    <title>Guide Me Places</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta property="og:title" content="Guide Me Places: Indonesia" />
+    <meta property="og:url" content="https://guide-me-places.fly.dev/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Explore a curation of tourist spots in the Indonesia archipelago" />
+    <meta property="og:image" content="<%= image_path("pemandangan.png")%>" />
+    <link rel="icon" type="image/x-icon" href="<%= image_path("favicon.ico") %>">
+
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
@@ -12,6 +19,17 @@
     <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css" %>
     <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.0/MarkerCluster.Default.min.css" %>
     <%= javascript_importmap_tags %>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1KS324S7V4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1KS324S7V4');
+    </script>
   </head>
 
   <body class="grow">
