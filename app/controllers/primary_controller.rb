@@ -5,6 +5,12 @@ class PrimaryController < ApplicationController
     end
   end
 
+  def world_view
+    respond_to do |format|
+      format.turbo_stream
+    end
+  end
+
   def place_details
     @location = params["location"]
     @iframe1 = params["iframe1"]

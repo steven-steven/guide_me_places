@@ -25,7 +25,7 @@ export default class extends Controller {
     L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}{r}.{ext}', {
       minZoom: 0,
       maxZoom: 18,
-      attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      // attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       ext: 'png'
     }).addTo(this.map);
 
@@ -65,10 +65,11 @@ export default class extends Controller {
   )
 
   addInfoControl = () => {
-    this.info = L.control();
+    this.info = L.control({ position: 'bottomleft' });
 
     this.info.onAdd = (map) => {
       this._div = L.DomUtil.create('div', 'info'); // div with class "info"
+      this._div.style.fontSize = '10px';
       this.info.update();
       return this._div;
     };

@@ -1,6 +1,6 @@
 <div class="flex flex-col h-full w-full bg-[#f8f7f4]">
   <nav class="flex-none bg-inherit opacity-90">
-    <h1 class="p-3 text-xl">
+    <h1 class="md:p-3 md:text-xl text-sm">
       <%= image_tag(image_path("favicon.ico"), alt: "Logo", class:"w-10 mr-2 inline") %>
       Guide Me Places
     </h1>
@@ -8,9 +8,9 @@
   <div class="flex-grow relative w-full">
     <div data-controller="map" id="map" class="absolute w-full h-1/2 z-0" data-map-locations="<%= @locations.to_json %>"></div>
     <div class="absolute bottom-0 left-0 z-0 h-1/2 w-full flex">
-      <div id="place_details" class="h-full w-full relative border border-4 p-5">
+      <div id="place_details" class="h-full w-full relative border border-4 p-2">
         <div class="w-full h-full bg-pemandangan bg-no-repeat bg-top bg-cover">
-          <div class="absolute z-10 inset-0 w-full h-full p-5 bg-white bg-opacity-70 dark:bg-opacity-70 flex flex-col gap-3 justify-center items-center">
+          <div class="absolute z-10 inset-0 w-full h-full p-9 bg-white bg-opacity-70 dark:bg-opacity-70 flex flex-col gap-3 justify-center items-center">
             Select a destination to begin your journey
             <%#= heroicon "arrow-down-circle", variant: :outline, options: { class: "shrink-0 h-10 w-10 text-slate-700 dark:text-slate-200" } %>
           </div>
