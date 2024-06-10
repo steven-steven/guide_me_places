@@ -4,7 +4,7 @@ Explore a curation of tourist spots in the Indonesia archipelago
 ## Development instruction
 - Run `bin/rails db:migrate`
 - Run `overmind start -f Procfile.dev` or `bin/dev`
-- Run `overmind connect web` in a separate terminal for debugging
+- Run `overmind connect web` or `bundle exec rdbg -a` in a separate terminal for debugging
 - `EDITOR=vim rails credentials:edit` / `EDITOR=vim rails credentials:edit --environment production`
 
 ## How contents are curated

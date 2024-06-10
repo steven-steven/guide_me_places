@@ -45,8 +45,8 @@ export default class extends Controller {
     locations.forEach((location) => {
       const marker = L.marker([location.lat, location.long], {icon: this.markerIcons(location.emoji)})
         .on('click', (e) => {
-          this.info.update(location.place);
-          get(`/place_details`, { query: { location: location.place, iframe1: location.iframe1 }, responseKind: "turbo-stream" })
+          this.info.update(location.name);
+          get(`/place_details`, { query: { id: location.id }, responseKind: "turbo-stream" })
         });
 
       markers.addLayer(marker);
