@@ -6,8 +6,8 @@ namespace :data do
 
     Place.delete_all
 
-    GoogleSheetReader.call(:call, sheet: "Places to visit").each do |item|
-      identifier = AirtableReader.call(:get_place_id, table: "Places", place_name: item[:place])
+    GoogleSheetReader.call(:call).each do |item|
+      identifier = AirtableReader.call(:get_place_id, place_name: item[:place])
       Place.create(
         name: item[:place],
         identifier:,

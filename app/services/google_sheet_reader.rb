@@ -1,12 +1,11 @@
 require 'google_drive'
 
 class GoogleSheetReader < ApplicationService
-  def initialize(sheet:)
-    @sheet = sheet
+  def initialize
     @session = GoogleDrive::Session.from_service_account_key("./config/google_drive_service_api_key.json")
   end
 
-  def call
+  def call(sheet: "Places to visit")
     spreadsheet = @session.spreadsheet_by_title(@sheet)
     worksheet = spreadsheet.worksheets.first
     worksheet.rows[1..].map do |location|
