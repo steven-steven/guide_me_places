@@ -9,11 +9,11 @@
           <% @articles.each do |article| %>
             <%= link_to(article[:url], target: "_blank") do %>
               <div class="flex gap-3 mt-3 hover:border-2 hover:border-dashed">
-                <%= image_tag(article[:image].presence || image_path("default_article_image.png"), data: { default: image_path("default_article_image.png") }, class:"article_img w-3/12 object-cover") %>
+                <%= image_tag(article[:image].presence || image_path("default_article_image.png"), data: { default: image_path("default_article_image.png") }, class:"article_img w-3/12 object-cover", loading: "lazy") %>
                 <div>
                   <p class="font-semibold text-xs md:text-lg">
                     <%= article[:title] %>
-                    <%= image_tag(article[:favicon] || '', class:"w-5 inline mx-2") %>
+                    <%= image_tag(article[:favicon] || '', class:"w-5 inline mx-2", loading: "lazy") %>
                   </p>
                   <p class="text-xs"><%= article[:short_description] || '' %></p>
                 </div>

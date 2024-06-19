@@ -12,7 +12,7 @@ class AirtableReader < ApplicationService
   end
 
   def get_place_id(place_name:)
-    @places_table.select(formula: "Name = '#{@place_name}'").first[:id]
+    @places_table.select(formula: "Name = '#{place_name}'").first[:id]
   end
 
   def get_unprocessed_article_urls

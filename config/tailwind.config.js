@@ -13,7 +13,7 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
-        'pemandangan': "url('pemandangan.png')"
+        'pemandangan': "url('pemandangan.webp')"
       },
     },
   },

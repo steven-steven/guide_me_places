@@ -6,7 +6,7 @@ class GoogleSheetReader < ApplicationService
   end
 
   def call(sheet: "Places to visit")
-    spreadsheet = @session.spreadsheet_by_title(@sheet)
+    spreadsheet = @session.spreadsheet_by_title(sheet)
     worksheet = spreadsheet.worksheets.first
     worksheet.rows[1..].map do |location|
       {
