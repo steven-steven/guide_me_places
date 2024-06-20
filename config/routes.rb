@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "primary#index"
+  get "map", to: "primary#map"
   get "place_details", to: "primary#place_details"
   get "world_view", to: "primary#world_view"
 end

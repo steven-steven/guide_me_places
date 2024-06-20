@@ -1,6 +1,5 @@
 class PrimaryController < ApplicationController
   def index
-    @locations_json = Place.to_json
   end
 
   def world_view
@@ -24,5 +23,9 @@ class PrimaryController < ApplicationController
     respond_to do |format|
       format.turbo_stream
     end
+  end
+
+  def map
+    @locations_json = Place.to_json
   end
 end

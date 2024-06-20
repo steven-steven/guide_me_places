@@ -6,14 +6,22 @@
     </h1>
   </nav>
   <div class="flex-grow relative w-full">
-    <div data-controller="map" id="map" class="absolute w-full h-1/2 z-0" data-map-locations="<%= @locations_json %>"></div>
+    <turbo-frame id="map_frame" src="<%= map_path %>">
+      <div class="h-1/2 flex items-center justify-center md:text-xl">
+        <svg fill='none' class="w-7 h-7 md:w-10 md:h-10 animate-spin" viewBox="0 0 32 32">
+					<path clip-rule='evenodd'
+						d='M15.165 8.53a.5.5 0 01-.404.58A7 7 0 1023 16a.5.5 0 011 0 8 8 0 11-9.416-7.874.5.5 0 01.58.404z'
+						fill='currentColor' fill-rule='evenodd' />
+				</svg>
+        Your map is loading...
+      </div>
+    </turbo-frame>
     <div class="absolute bottom-0 left-0 z-0 h-1/2 w-full flex">
       <div id="place_details" class="h-full w-full relative border border-4 p-2">
-        <div class="w-full h-full bg-no-repeat bg-top bg-cover" style="background-image: url(<%=image_path('pemandangan.webp')%>);">
-          <div class="absolute z-10 inset-0 w-full h-full p-9 bg-white bg-opacity-70 dark:bg-opacity-70 flex flex-col gap-3 justify-center items-center">
-            Select a destination to begin your journey
-            <%#= heroicon "arrow-down-circle", variant: :outline, options: { class: "shrink-0 h-10 w-10 text-slate-700 dark:text-slate-200" } %>
-          </div>
+        <img class="w-full h-full object-top object-cover" src="<%=image_path('pemandangan.webp')%>" loading="lazy"/>
+        <div class="absolute z-10 inset-0 w-full h-full p-9 bg-white bg-opacity-70 dark:bg-opacity-70 flex flex-col gap-3 justify-center items-center">
+          Select a destination to begin your journey
+          <%#= heroicon "arrow-down-circle", variant: :outline, options: { class: "shrink-0 h-10 w-10 text-slate-700 dark:text-slate-200" } %>
         </div>
       </div>
       <div id="street_view">
