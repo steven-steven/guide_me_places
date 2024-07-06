@@ -2,7 +2,7 @@ require 'google_drive'
 
 class GoogleSheetReader < ApplicationService
   def initialize
-    @session = GoogleDrive::Session.from_service_account_key("./config/google_drive_service_api_key.json")
+    @session = GoogleDrive::Session.from_service_account_key(StringIO.new(Rails.application.credentials.google_service_account_key.to_json))
   end
 
   def call(sheet: "Places to visit")
