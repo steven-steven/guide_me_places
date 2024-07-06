@@ -5,6 +5,7 @@ config/google_drive_service_api_key.json
 
 # Ignore all logfiles and tempfiles.
 /log/*
+log/development.log
 /tmp/*
 !/log/.keep
 !/tmp/.keep
@@ -13,5 +14,8 @@ config/google_drive_service_api_key.json
 /public/packs
 /public/packs-test
 /public/assets
+storage/*
+app/assets/builds/*
 
 .DS_Store
+

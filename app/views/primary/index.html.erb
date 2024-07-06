@@ -1,9 +1,14 @@
 <div class="flex flex-col h-full w-full bg-[#f8f7f4]">
   <nav class="flex-none bg-inherit opacity-90">
-    <h1 class="md:p-3 md:text-xl text-sm">
-      <%= image_tag(image_path("favicon.ico"), alt: "Logo", class:"w-10 mr-2 inline") %>
-      Guide Me Places
-    </h1>
+    <div class="flex justify-between">
+      <h1 class="md:p-3 md:text-xl text-sm">
+        <%= image_tag(image_path("favicon.ico"), alt: "Logo", class:"w-10 mr-2 inline") %>
+        Guide Me Places
+      </h1>
+      <div class="m-1">
+        <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="guidemeplaces" data-color="#9ccbca" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#FFDD00"></script>
+      </div>
+    </div>
   </nav>
   <div class="flex-grow relative w-full">
     <turbo-frame id="map_frame" src="<%= map_path %>">
